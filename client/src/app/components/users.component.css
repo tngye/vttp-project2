@@ -1,0 +1,17 @@
+body{
+    background-color: #f2f1ef;
+    color: #413f3d;
+    margin-bottom: 20px;
+}
+
+mat-form-field, mat-label, matInput{
+    color:#413f3d !important;
+}
+
+table, tr, td{
+    padding: 10px;
+    margin:10px;
+}
+mat-raised-button{
+    color:#413f3d
+}

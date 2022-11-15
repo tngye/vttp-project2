@@ -1,0 +1,84 @@
+<head>
+</head>
+
+<body style="margin:55px;">
+    <div style="margin-left:50px;">
+        <h2>
+            {{type}} > {{ data.name }}
+        </h2>
+    </div>
+
+    <div *ngIf="data != null">
+        <table>
+            <tr>
+                <td>
+                    <mdb-carousel [controls]="true" [indicators]="true" [dark]="true"
+                        style="width:1000px; height:500px; display:inline-block">
+                        <mdb-carousel-item *ngFor="let i of data.imgList;" style="width:1000px; height:500px;">
+                            <img [src]="i.img" class="d-block w-100" alt="..." />
+                        </mdb-carousel-item>
+                    </mdb-carousel>
+                </td>
+                <td>
+                    <div style="display:inline-block; font-size: 50px; margin-right:200px; margin-bottom:100px;">
+                        <h2>
+                            Ratings
+                        </h2>
+                        <div>
+                            <span style="font-size:70px;">{{ data.rating }}</span> / 5
+                        </div>
+                        <div *ngIf="!boolfav">
+                            <button class="changesize" mat-raised-button (click)="addtofav(data)">ADD TO FAV &nbsp;<mat-icon>
+                                favorite_border</mat-icon></button>
+                        </div>
+                        <div *ngIf="boolfav">
+                            <button class="changesize" mat-raised-button (click)="addtofav(data)">REMOVE TO FAV &nbsp;<mat-icon>
+                                    favorite</mat-icon></button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+            <td colspan="2">
+                <div>
+                    <mat-card class="body-mat-card" [innerHTML]="data.description">
+                        <!-- {{ data.description }} -->
+                    </mat-card>
+                </div>
+            </td>
+            </tr>
+            <tr *ngIf="data.reviews">
+                <td colspan="2">
+                    <h2 style="margin-left:50px;">
+                        Reviews
+                    </h2>
+                    <div>
+                        <mat-card class="example-card" *ngFor="let a of data.reviews;">
+                            <img mat-card-image [src]="a.profilePhoto" style="width:150px">
+                            <mat-card-title class="overflow">{{ a.text }}</mat-card-title>
+                            <mat-card-content>
+                                <p>
+                                    <b>{{ a.authorName }}</b>
+                                </p>
+                            </mat-card-content>
+
+                        </mat-card>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+        <table>
+            <tr>
+                <!-- <td rowspan="2">
+                    <img [src]=" data.img " height=450/>
+                </td> -->
+                <td>
+                    <!-- <img [src]=" i.img " height=450/> *ngFor="let i of data.imgList; " -->
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>

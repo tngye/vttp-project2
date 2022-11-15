@@ -1,0 +1,23 @@
+<body>
+    <!-- <mat-progress-bar mode="determinate"></mat-progress-bar> -->
+    <mat-toolbar>
+        <h3 class="nav-words" [routerLink]="['/']">Home</h3>
+        <span class="example-spacer"></span>
+        <div *ngIf="!auth">
+            <h3 class="nav-words" [routerLink]="['/login']">Login</h3>
+        </div>
+        <div *ngIf="auth">
+            <h4 class="nav-words" [matMenuTriggerFor]="menu">{{ authuser }}</h4>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item [routerLink]="['/user']">Profile</button>
+                <button mat-menu-item [routerLink]="['/favourites']">Favourites</button>
+                <button mat-menu-item (click)="signout()">Log out</button>
+            </mat-menu>
+            <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon"><img [src]="dataUrl" width="120%">
+            </mat-icon>
+        </div>
+    </mat-toolbar>
+    <div class="full-height">
+        <router-outlet></router-outlet>
+    </div>
+</body>

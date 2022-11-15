@@ -1,0 +1,19 @@
+<!-- <mat-form-field>
+    <input type="text" matInput formControlName="photo">
+</mat-form-field> -->
+<form [formGroup]="form" enctype="multipart/form-data" (ngSubmit)="doUpload()">
+<div style="margin: 30px;">
+    <input style="margin-left:40px;" type="file" formControlName="file" #toUpload>
+    <div style="margin-top: 30px; justify-content: space-around; display: flex;">
+        <button type="button" mat-raised-button color="warn" mat-dialog-close>
+            Cancel
+            <mat-icon fontIcon="cancel"></mat-icon>
+        </button>
+        <button type="submit" mat-raised-button color="success" [disabled]="form.invalid">
+            Upload
+            <mat-icon fontIcon="check_circle"></mat-icon>
+        </button>
+    
+    </div>
+</div>
+</form>

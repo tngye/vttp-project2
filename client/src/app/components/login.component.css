@@ -1,0 +1,30 @@
+/* .center-it{
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    color:#413f3d !important;
+} */
+
+.example-card {
+    width: 600px;
+    min-height: 350px;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top: 50px;
+    background-color: #d0cfcc;
+    color: #413f3d !important;
+    padding-top:50px;
+    font-size: 30px;
+    /* justify-content: space-around; */
+}
+
+mat-card-content, mat-form-field, mat-label, mat-form-field-underline, matInput::placeholder{
+    color:#413f3d !important;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: #413f3d !important;
+}
+.mat-typography{
+    margin-top: 50px;
+}

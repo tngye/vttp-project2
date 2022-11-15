@@ -1,0 +1,29 @@
+.mat-cell{
+    padding:10px;
+    font-size: 20px;
+}
+
+.mat-header-cell{
+    padding:20px;
+    font-size: 15px;
+}
+
+body{
+    margin:50px;
+}
+
+.mat-table, .mat-paginator, table, .mat-elevation-z8{
+    background-color: #3836345f;
+}
+.mat-table{
+    margin-left:-1px;
+    width:100%
+}
+#pdfTable{
+    width:800px;
+    font-size:15px;
+}
+.email{
+    float: right;
+    margin-top: 30px;
+}

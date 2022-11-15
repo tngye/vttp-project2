@@ -1,0 +1,54 @@
+<div class="center-it">
+	<form [formGroup]="form">
+
+		<mat-card class="example-card" id="card" style="text-align: center;">
+			<mat-card-title>
+				Login
+			</mat-card-title>
+
+			<mat-card-content>
+
+				<mat-form-field>
+					<mat-label>email</mat-label>
+					<input matInput formControlName="username">
+				</mat-form-field><br />
+
+				<mat-form-field>
+					<mat-label>password</mat-label>
+					<input matInput type="password" formControlName="password">
+				</mat-form-field><br />
+				<button mat-raised-button style="margin-right:5px;" (click)="login()">Login</button>
+				<button mat-raised-button style="margin-right:5px;" (click)="register()">Register</button>
+
+				<div *ngIf="openDialogLogin && !openDialogReg" class="mat-typography">
+					<mat-dialog-content>
+						<h3 style="color: red">Login unsuccessful. Please try again.</h3>
+					</mat-dialog-content>
+				</div>
+
+				<div *ngIf="openDialogReg && !donereg" class="mat-typography">
+					<mat-dialog-content>
+						<h3 style="color: red">Email already exist. Please try again.</h3>
+					</mat-dialog-content>
+				</div>
+
+				<div *ngIf="donereg" class="mat-typography">
+					<mat-dialog-content>
+						<h3 style="color: green">Registered Successfully. Please Login.</h3>
+					</mat-dialog-content>
+				</div>
+
+			
+			</mat-card-content>
+		</mat-card>
+	</form>
+</div>
+
+<!-- <div *ngIf="openDialog">
+	<mat-dialog-content class="mat-typography">
+		<h3>Login unsuccessful. Please try again.</h3>
+	  </mat-dialog-content>
+	  <mat-dialog-actions align="end">
+		  <button mat-button mat-dialog-close>Close</button>
+	  </mat-dialog-actions>
+</div> -->

@@ -1,0 +1,36 @@
+.changesize{
+    width:200px;
+    height:50px;
+}
+
+.example-card {
+    width: 18%;
+    min-height: 600px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right:35px;
+    margin-top: 25px;
+    /* justify-content: space-around; */
+}
+
+.body-mat-card{
+    width: 98%;
+}
+
+mat-card-title{
+    font-size: 12px;
+}
+
+img{
+    padding:10px;
+}
+
+mat-card{
+    background-color:#B3B3B3;
+    color: #413f3d;
+}
+
+table, tr, td{
+    width:100%
+}
+

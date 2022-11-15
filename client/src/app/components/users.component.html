@@ -1,0 +1,33 @@
+<body>
+		<table>
+			<tr>
+				<th>
+					<h1>
+						Profile
+					</h1>
+				</th>
+			</tr>
+			<tr>
+				<td>
+					Profile Photo:
+				</td>
+				<td>
+					<img [src]="dataUrl" width="200px">
+				</td>
+				<td>
+					<button type="button" mat-raised-button color="accent" (click)="openDialog()">Edit</button>
+				</td>
+				<td>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Email: 
+				</td>
+				<td>
+					{{ authuser }}
+				</td>
+			</tr>
+		</table>
+</body>

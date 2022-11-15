@@ -1,0 +1,46 @@
+body {
+    font-size: 18px;
+}
+
+input {
+    height: 30px;
+    margin-left:30px;
+    margin-top:20px;
+}
+
+.search{
+    margin-top:20px;
+}
+
+tr {
+    width: 100%
+}
+
+.example-card {
+    width: 320px;
+    min-height: 450px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right:15px;
+    margin-left:40px;
+    margin-top: 25px;
+    /* justify-content: space-around; */
+}
+img{
+    height:220px;
+}
+
+.next-button{
+    margin: 30px;
+    left: 30%;
+    right: 30%;
+    width:40%
+}
+
+.disable{
+    margin: 30px;
+    margin-left: 30%;
+    width:40%;
+    color: grey;
+}
+
