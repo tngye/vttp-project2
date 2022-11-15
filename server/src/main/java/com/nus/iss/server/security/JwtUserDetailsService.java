@@ -36,6 +36,7 @@ public class JwtUserDetailsService implements UserDetailsService {
 		// return new User("foo", "$2a$12$1poPkL.tVmpNsSRHrNsc2u5IducB/geb549Y6lxmdMrP1e8OK47r2", new ArrayList<>());
 	}
 	
+	
 	public Boolean save(User user) {
 		User newUser = new User();
 		newUser.setUsername(user.getUsername());
